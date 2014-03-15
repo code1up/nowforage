@@ -2,23 +2,37 @@
     <select id="category">
         {{#each categories}}
             <option value="{{name}}">
-                {{> item}}
+                {{> category}}
             </option>
         {{/each}}
     </select>
 
     <input type="text" id="description" />
 
+    <video id="video" class="video">TBC</video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <button id="snapButton">Snap</button>
+
     <div>{{location}}</div>
 
-    <button id="addButton">Add</button>
+    {{#if position}}
+        <button id="addButton">Add</button>
+
+    {{else}}
+        <div>Waiting for location...</div>
+
+    {{/if}}
 
     <div>
-        {{#each items}}
+        {{#each allItems}}
+            ...
+            {{category}}
+            {{description}}
         {{/each}}
     </div>
 </template>
 
-<template name="item">
+<template name="category">
     {{name}}
 </template>

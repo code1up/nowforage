@@ -1,12 +1,22 @@
 <template name="create">
-    <select>
+    <select id="category">
         {{#each categories}}
             <option value="{{name}}">
                 {{> item}}
             </option>
         {{/each}}
     </select>
-    
+
+    <input type="text" id="description" />
+
+    <div>{{location}}</div>
+
+    <button id="addButton">Add</button>
+
+    <div>
+        {{#each items}}
+        {{/each}}
+    </div>
 </template>
 
 <template name="item">

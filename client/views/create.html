@@ -1,0 +1,14 @@
+<template name="create">
+    <select>
+        {{#each categories}}
+            <option value="{{name}}">
+                {{> item}}
+            </option>
+        {{/each}}
+    </select>
+    
+</template>
+
+<template name="item">
+    {{name}}
+</template>

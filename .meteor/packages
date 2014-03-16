@@ -8,3 +8,7 @@ autopublish
 insecure
 preserve-inputs
 iron-router
+coffeescript
+bootstrap-3
+underscore
+less
